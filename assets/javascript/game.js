@@ -10,6 +10,8 @@ let resetCountElement = document.querySelector("#reset-button")
 let resetNumber = document.querySelector("#num-resets")
 let teamgoals = document.querySelector("#goals")
 
+let myAudio = new Audio ("mouse_click.mp3")
+
 teamOneShotButton.addEventListener("click", function () {
     let currentTeamOneShotCount = Number(teamOneShotCountElement.innerHTML)
     let newShotCountOne = currentTeamOneShotCount + 1
@@ -54,6 +56,7 @@ resetCountElement.addEventListener("click", function () {
         teamTwoShotCountElement.innerHTML = Number(0);
         teamOneGoalCountSpanElement.innerHTML = Number(0);
         teamTwoGoalCountSpanElement.innerHTML = Number(0);
+        myAudio.play();
     }
 })
 
